@@ -27,43 +27,34 @@ import {
   useDisconnect,
 } from "thirdweb/react";
 import type { Wallet } from "thirdweb/wallets";
-import { SideMenu } from "./SideMenu";
+import { SideMenu, SideMenuDesktop } from "./SideMenu";
 
 export function Navbar() {
   const account = useActiveAccount();
   const wallet = useActiveWallet();
   const { colorMode } = useColorMode();
+
   return (
-    <Box py="30px" px={{ base: "20px", lg: "50px" }}>
-      <Flex direction="row" justifyContent="space-between">
-        <Box my="auto">
-          <Heading
-            as={Link}
-            href="/"
-            _hover={{ textDecoration: "none" }}
-            bgGradient="linear(to-l, #7928CA, #FF0080)"
-            bgClip="text"
-            fontWeight="extrabold"
-          >
-            {/* Replace this with your own branding */}
-            THIRDMART
-          </Heading>
-        </Box>
-        <Box display={{ lg: "block", base: "none" }}>
-          <ToggleThemeButton />
-          {account && wallet ? (
-            <ProfileButton address={account.address} wallet={wallet} />
-          ) : (
-            <ConnectButton
-              client={client}
-              theme={colorMode}
-              connectButton={{ style: { height: "56px" } }}
-            />
-          )}
-        </Box>
-        <SideMenu />
-      </Flex>
-    </Box>
+    <Flex>
+      <SideMenuDesktop />
+      <Box py="30px" px={{ base: "20px", lg: "50px" }} ml={{ lg: "250px" }} flex="1">
+        <Flex direction="row" justifyContent="flex-end" alignItems="center">
+          <Box display={{ lg: "block", base: "none" }}>
+            <ToggleThemeButton />
+            {account && wallet ? (
+              <ProfileButton address={account.address} wallet={wallet} />
+            ) : (
+              <ConnectButton
+                client={client}
+                theme={colorMode}
+                connectButton={{ style: { height: "56px" } }}
+              />
+            )}
+          </Box>
+          <SideMenu />
+        </Flex>
+      </Box>
+    </Flex>
   );
 }
 

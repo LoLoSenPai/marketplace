@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Providers } from "@/components/shared/Providers";
 import { Navbar } from "@/components/shared/Navbar";
+import { SideMenuDesktop } from "@/components/shared/SideMenu";
+import "../globals.css";
 
 export const metadata: Metadata = {
   title: "Whisker | Marketplace",
@@ -16,8 +18,11 @@ export default function RootLayout({
     <html lang="en">
       <body style={{ paddingBottom: "100px" }}>
         <Providers>
-          <Navbar />
-          {children}
+          <SideMenuDesktop />
+          <div className="lg:ml-64">
+            <Navbar />
+            <main>{children}</main>
+          </div>
         </Providers>
       </body>
     </html>
