@@ -20,7 +20,7 @@ function infos() {
           solely dedicated to the development of the project.
         </p>
       </div>
-      <div className="flex flex-row space-x-8">
+      <div className="flex flex-col max-sm:space-y-6 md:space-x-8 md:flex-row">
         <Image src="/infos-resume.png" width={768} height={432} alt="Tokenomic schema" />
         <div className="space-y-5 text-xl">
           <h2 className="text-3xl">REWARD SYSTEM</h2>
