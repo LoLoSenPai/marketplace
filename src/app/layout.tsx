@@ -19,7 +19,7 @@ export default function RootLayout({
       <body style={{ paddingBottom: "100px" }}>
         <Providers>
           <SideMenuDesktop />
-          <div className="lg:ml-64">
+          <div className="p-4 lg:ml-64">
             <Navbar />
             <main>{children}</main>
           </div>
