@@ -3,6 +3,7 @@
 import { client } from "@/consts/client";
 import { useGetENSName } from "@/hooks/useGetENSName";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { DiscordLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons'
 import Link from "next/link";
 import {
   Box,
@@ -19,7 +20,6 @@ import {
   useDisclosure,
   Image,
   Flex,
-  Text,
   Divider
 } from "@chakra-ui/react";
 import { useRef } from "react";
@@ -189,7 +189,10 @@ export function SideMenuDesktop() {
       </Box>
       <Box>
         <Divider />
-        <ConnectButton theme={colorMode} client={client} />
+        <div className="flex flex-row gap-4 mt-4">
+          <DiscordLogoIcon className="w-9 h-9" />
+          <TwitterLogoIcon className="w-9 h-9" />
+        </div>
       </Box>
     </Flex>
   );

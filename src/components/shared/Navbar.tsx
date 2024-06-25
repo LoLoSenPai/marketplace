@@ -8,7 +8,6 @@ import {
   Box,
   Button,
   Flex,
-  Heading,
   Menu,
   MenuButton,
   MenuItem,
