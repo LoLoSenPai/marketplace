@@ -5,6 +5,7 @@ import { useGetENSName } from "@/hooks/useGetENSName";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { DiscordLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons';
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Box,
   Button,
@@ -143,6 +144,7 @@ export function SideMenu() {
 
 export function SideMenuDesktop() {
   const { colorMode } = useColorMode();
+  const pathname = usePathname();
 
   return (
     <Flex
@@ -151,7 +153,7 @@ export function SideMenuDesktop() {
       top="0"
       h="100vh"
       w="250px"
-      bg={colorMode === "light" ? "gray.100" : "gray.900"}
+      // bg={colorMode === "light" ? "gray.100" : "gray.900"}
       p={5}
       direction="column"
       justifyContent="space-between"
@@ -167,22 +169,22 @@ export function SideMenuDesktop() {
         </Box>
         <VStack spacing={4} align="flex-start">
           <Link href="/" passHref className="w-full">
-            <div className="flex w-full px-4 py-2 text-3xl rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">
+            <div className={`flex w-full px-4 py-2 text-3xl rounded-md ${pathname === "/" ? "link-active" : "hover-bg"}`}>
               Home
             </div>
           </Link>
           <Link href="/marketplace" passHref className="w-full">
-            <div className="flex w-full px-4 py-2 text-3xl rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">
+            <div className={`flex w-full px-4 py-2 text-3xl rounded-md ${pathname === "/marketplace" ? "link-active" : "hover-bg"}`}>
               Marketplace
             </div>
           </Link>
           <Link href="/games" passHref className="w-full">
-            <div className="flex w-full px-4 py-2 text-3xl rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">
+            <div className={`flex w-full px-4 py-2 text-3xl rounded-md ${pathname === "/games" ? "link-active" : "hover-bg"}`}>
               Games
             </div>
           </Link>
           <Link href="/infos" passHref className="w-full">
-            <div className="flex w-full px-4 py-2 text-3xl rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">
+            <div className={`flex w-full px-4 py-2 text-3xl rounded-md ${pathname === "/infos" ? "link-active" : "hover-bg"}`}>
               Infos
             </div>
           </Link>
@@ -191,10 +193,18 @@ export function SideMenuDesktop() {
       <Box>
         <Divider />
         <div className="flex flex-row gap-4 mt-4">
-          <DiscordLogoIcon className="w-9 h-9" />
-          <TwitterLogoIcon className="w-9 h-9" />
-          <SiLinktree className="w-9 h-9" />
-          <FaTelegramPlane className="w-9 h-9" />
+          <a href="https://discord.com/invite/unjG6yz4T3" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110">
+            <DiscordLogoIcon className="w-9 h-9" />
+          </a>
+          <a href="https://x.com/Whisker_Witcoin" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110">
+            <TwitterLogoIcon className="w-9 h-9" />
+          </a>
+          <a href="https://linktr.ee/WhiskerWIT" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110">
+            <SiLinktree className="w-9 h-9" />
+          </a>
+          <a href="https://t.me/WhiskerCommunity" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110">
+            <FaTelegramPlane className="w-9 h-9" />
+          </a>
         </div>
       </Box>
     </Flex>

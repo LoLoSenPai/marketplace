@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{ paddingBottom: "100px" }}>
+      <body className="pb-[100px]">
         <Providers>
           <SideMenuDesktop />
           <div className="p-4 lg:ml-64">
