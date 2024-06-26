@@ -144,6 +144,7 @@ export function SideMenu() {
 
 export function SideMenuDesktop() {
   const pathname = usePathname();
+  const marketplacePath = "/collection/84532/0xcc5Fcb80dc14C1de40c3CCb26fa4b0CEa0fc5665";
 
   return (
     <Flex
@@ -172,8 +173,8 @@ export function SideMenuDesktop() {
               Home
             </div>
           </Link>
-          <Link href="/collection/84532/0xcc5Fcb80dc14C1de40c3CCb26fa4b0CEa0fc5665" passHref className="w-full">
-            <div className={`flex w-full px-4 py-2 text-3xl rounded-md ${pathname === "/marketplace" ? "link-active" : "hover-bg"}`}>
+          <Link href={marketplacePath} passHref className="w-full">
+            <div className={`flex w-full px-4 py-2 text-3xl rounded-md ${pathname === marketplacePath ? "link-active" : "hover-bg"}`}>
               Marketplace
             </div>
           </Link>
