@@ -12,7 +12,7 @@ export default function Marketplace() {
     return (
         <Flex>
             <Box mt="24px" m="auto">
-                <h1 className="mb-10 text-6xl text-center">Marketplace</h1>
+                <h1 className="mb-10 text-6xl text-center">Collections</h1>
                 <Flex direction="column" gap="4">
                     {/* <Heading ml="20px" mt="40px">
                         Collections
