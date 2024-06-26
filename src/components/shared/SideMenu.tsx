@@ -76,7 +76,7 @@ export function SideMenu() {
                   Home
                 </Box>
               </Link>
-              <Link href="/marketplace" passHref>
+              <Link href="/collection/84532/0xcc5Fcb80dc14C1de40c3CCb26fa4b0CEa0fc5665" passHref>
                 <Box
                   as="a"
                   fontSize='3xl'
@@ -143,7 +143,6 @@ export function SideMenu() {
 }
 
 export function SideMenuDesktop() {
-  const { colorMode } = useColorMode();
   const pathname = usePathname();
 
   return (
@@ -173,7 +172,7 @@ export function SideMenuDesktop() {
               Home
             </div>
           </Link>
-          <Link href="/marketplace" passHref className="w-full">
+          <Link href="/collection/84532/0xcc5Fcb80dc14C1de40c3CCb26fa4b0CEa0fc5665" passHref className="w-full">
             <div className={`flex w-full px-4 py-2 text-3xl rounded-md ${pathname === "/marketplace" ? "link-active" : "hover-bg"}`}>
               Marketplace
             </div>
