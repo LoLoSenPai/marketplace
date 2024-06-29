@@ -14,6 +14,7 @@ function games() {
           There will be 9 temporary worlds, to be won, 15% of our supply.</div>
       </div>
       <Image src='/game-preview.png' width={513} height={294} alt='Preview picture of the 1st game' />
+      <Image src='/game-preview.png' width={513} height={294} alt='Preview picture of the 1st game' className='blur-md' />
     </div>
   )
 }

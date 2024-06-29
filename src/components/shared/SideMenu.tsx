@@ -160,7 +160,7 @@ export function SideMenuDesktop() {
       display={{ base: "none", lg: "flex" }}
     >
       <Box>
-        <Box mt={4} mb={10} ml={10}>
+        <Box mt={4} mb={10}>
           <Image
             src='/logo.jpg'
             height="80px"
