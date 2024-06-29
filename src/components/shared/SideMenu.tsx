@@ -4,6 +4,9 @@ import { client } from "@/consts/client";
 import { useGetENSName } from "@/hooks/useGetENSName";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { DiscordLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons';
+import { FaCircleInfo } from "react-icons/fa6";
+import { RiHomeSmile2Fill } from "react-icons/ri";
+import { PiStorefrontFill } from "react-icons/pi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -26,7 +29,7 @@ import {
 import { useRef } from "react";
 import { FaRegMoon, FaTelegramPlane } from "react-icons/fa";
 import { SiLinktree } from "react-icons/si";
-import { IoSunny } from "react-icons/io5";
+import { IoSunny, IoGameController } from "react-icons/io5";
 import {
   ConnectButton,
   useActiveAccount,
@@ -160,32 +163,36 @@ export function SideMenuDesktop() {
       display={{ base: "none", lg: "flex" }}
     >
       <Box>
-        <Box mt={4} mb={10}>
+        <Box mt={4} mb={10} className="flex items-center justify-center">
           <Image
-            src='/logo.jpg'
-            height="80px"
-            rounded="50px"
+            src='/logo-whisker.png'
+            height="120px"
+            className="rounded-full"
           />
         </Box>
         <VStack spacing={4} align="flex-start">
           <Link href="/" passHref className="w-full">
-            <div className={`flex w-full px-4 py-2 text-xl rounded-md ${pathname === "/" ? "link-active" : "hover-bg"}`}>
-              Home
+            <div className={`flex items-center justify-start w-full px-4 py-2 text-xl rounded-md ${pathname === "/" ? "link-active" : "hover-bg"}`}>
+              <RiHomeSmile2Fill className="mr-2 text-cardText" />
+              <span className="text-cardText">Home</span>
             </div>
           </Link>
           <Link href={marketplacePath} passHref className="w-full">
-            <div className={`flex w-full px-4 py-2 text-xl rounded-md ${pathname === marketplacePath ? "link-active" : "hover-bg"}`}>
-              Marketplace
+            <div className={`flex items-center justify-start w-full px-4 py-2 text-xl rounded-md ${pathname === marketplacePath ? "link-active" : "hover-bg"}`}>
+              <PiStorefrontFill className="mr-2 text-cardText" />
+              <span className="text-cardText">Marketplace</span>
             </div>
           </Link>
           <Link href="/games" passHref className="w-full">
-            <div className={`flex w-full px-4 py-2 text-xl rounded-md ${pathname === "/games" ? "link-active" : "hover-bg"}`}>
-              Games
+            <div className={`flex items-center justify-start w-full px-4 py-2 text-xl rounded-md ${pathname === "/games" ? "link-active" : "hover-bg"}`}>
+              <IoGameController className="mr-2 text-cardText" />
+              <span>Games</span>
             </div>
           </Link>
           <Link href="/infos" passHref className="w-full">
-            <div className={`flex w-full px-4 py-2 text-xl rounded-md ${pathname === "/infos" ? "link-active" : "hover-bg"}`}>
-              Infos
+            <div className={`flex items-center justify-start w-full px-4 py-2 text-xl rounded-md ${pathname === "/infos" ? "link-active" : "hover-bg"}`}>
+              <FaCircleInfo className="mr-2 text-cardText" />
+              <span className="text-cardText">Infos</span>
             </div>
           </Link>
         </VStack>

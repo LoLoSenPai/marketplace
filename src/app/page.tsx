@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { InfiniteMovingCards } from "@/components/InfiniteMovingCards";
 import { Button } from '@chakra-ui/react'
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
 
       <div className="flex justify-center p-2">
         <video
-          src="/ogrehunt-intro.webm"
+          src="/homepage-video.mp4"
           width={1920}
           height={1080}
           autoPlay
@@ -30,17 +31,23 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-around max-sm:space-y-6 md:space-x-8 md:flex-row">
-        <div className="space-y-5 text-xl lg:max-w-[35%]">
-          <h2 className="text-3xl">Whisker Sticker</h2>
-          <p className="text-card-text">
-            Whisker offers stickers to its community to conquer the world!
-            Get one for free and stick it in the most popular place near you!
-            Take a photo of it with the ID @Whisker_Witcoin on X so we can republish it
-          </p>
-          <Button border='2px' variant='outline' className="uppercase">Claim free</Button>
+      <div className="flex flex-col justify-center gap-12 max-sm:space-y-6 md:space-x-8 md:flex-row">
+        <div className=" text-xl lg:max-w-[35%] flex flex-col justify-between">
+          <div className="space-y-5">
+            <h2 className="text-3xl">Whisker Sticker</h2>
+            <p className="text-card-text">
+              Whisker offers stickers to its community to conquer the world!<br />
+              Get one for free and stick it in the most popular place near you!<br />
+              Take a photo of it with the ID @Whisker_Witcoin on X so we can republish it
+            </p>
+          </div>
+          <Link href='https://forms.gle/4ArTXWCW6PmHGhxu7' target="blank">
+            <Button border='2px' variant='outline' className="uppercase">Claim free</Button>
+          </Link>
         </div>
-        <Image src="/qr-code.png" width={605} height={311} alt="QR Code to receive real stickers" className="min-w-[40%]" />
+        <div className="flex items-center">
+          <Image src="/qr-code.png" width={605} height={311} alt="QR Code to receive real stickers" className="object-cover h-full" />
+        </div>
       </div>
 
       <div className="px-8 mx-auto text-center">

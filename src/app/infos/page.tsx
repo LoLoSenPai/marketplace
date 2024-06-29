@@ -25,14 +25,24 @@ function infos() {
         <div className="space-y-5 text-xl">
           <h2 className="text-3xl">REWARD SYSTEM</h2>
           <p className="text-card-text">
-            For the first world, we are going to put a token system.<br /><br />
-            Each player will be rewarded with Tokens as they progress.<br /><br />
-            These tokens will be for example $WITCAVEMAN or $WITEGYPT<br /><br />
-            These tokens will not be exchangeable and will have no real value.<br /><br />
-            These tokens will serve as a bridge between $WIT and the player experience<br /><br />
-            This reward system allows each player to be rewarded fairly.
+            Whisker uses an XP system linked to a playfab.<br /><br />
+            Rewards will be awarded fairly to each player according to their number of XP at the end of each world.<br /><br />
+            Please read this document to understand the stability of the game and the reward system: Game Summary<br /><br />
           </p>
         </div>
+      </div>
+      <div className="flex justify-center p-2">
+        <video
+          src="/homepage-video-2.mp4"
+          width={1920}
+          height={1080}
+          autoPlay
+          loop
+          muted
+          className="h-auto mb-4 pointer-events-none max-w-screen"
+        >
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   )
