@@ -27,7 +27,7 @@ import {
   Divider
 } from "@chakra-ui/react";
 import { useRef } from "react";
-import { FaRegMoon, FaTelegramPlane } from "react-icons/fa";
+import { FaRegMoon, FaTelegramPlane, FaExternalLinkAlt } from "react-icons/fa";
 import { SiLinktree } from "react-icons/si";
 import { IoSunny, IoGameController } from "react-icons/io5";
 import {
@@ -193,6 +193,12 @@ export function SideMenuDesktop() {
             <div className={`flex items-center justify-start w-full px-4 py-2 text-xl rounded-md ${pathname === "/infos" ? "link-active" : "hover-bg"}`}>
               <FaCircleInfo className="mr-2 text-cardText" />
               <span className="text-cardText">Infos</span>
+            </div>
+          </Link>
+          <Link href="https://whisker-nft.vercel.app/" passHref className="w-full" target="_blank" rel="noopener noreferrer">
+            <div className={`flex items-center justify-start w-full px-4 py-2 text-xl rounded-md hover-bg`}>
+              <FaExternalLinkAlt className="mr-2 text-cardText" />
+              <span className="text-cardText">Mint</span>
             </div>
           </Link>
         </VStack>

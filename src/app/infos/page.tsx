@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function infos() {
   return (
@@ -27,7 +28,7 @@ function infos() {
           <p className="text-card-text">
             Whisker uses an XP system linked to a playfab.<br /><br />
             Rewards will be awarded fairly to each player according to their number of XP at the end of each world.<br /><br />
-            Please read this document to understand the stability of the game and the reward system: Game Summary<br /><br />
+            Please read this document to understand the stability of the game and the reward system: <Link href="https://medium.com/@witcoinwhisker/whisker-beta-game-game-stability-and-level-system-9528ea0d242c" target='_blank'><span className='text-blue-500 hover:underline'>Game Summary</span></Link><br /><br />
           </p>
         </div>
       </div>

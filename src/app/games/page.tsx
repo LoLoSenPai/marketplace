@@ -15,24 +15,26 @@ function games() {
       </div>
       <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
         <div>
-          <Image
-            src='/game-preview.png'
-            width={513}
-            height={294}
-            alt='Preview picture of the 1st game'
-            className="object-cover w-full h-72 rounded-xl"
-          />
+          <Link href="https://witwhisker.com/build/" target="_blank" rel="noopener noreferrer">
+            <Image
+              src='/game-preview.png'
+              width={513}
+              height={294}
+              alt='Preview picture of the 1st game'
+              className="object-cover w-full h-72 rounded-xl transition-transform duration-300 hover:scale-105"
+            />
+          </Link>
           <h2 className='text-center'>
             Whisker BETA World 2 <span className="block text-center">Egyptians</span>
           </h2>
         </div>
-        <div>
+        <div className='cursor-not-allowed'>
           <Image
             src='/game-preview-soon.png'
             width={513}
             height={294}
             alt='Coming soon'
-            className="object-cover w-full h-72 rounded-xl"
+            className="object-cover w-full h-72 rounded-xl transition-transform duration-300 hover:scale-103"
           />
           <h2 className='text-center'>
             Whisker BETA World 1 <span className="block text-center">Caveman</span>
