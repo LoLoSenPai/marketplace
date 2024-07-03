@@ -195,7 +195,7 @@ export function SideMenuDesktop() {
               <span className="text-cardText">Infos</span>
             </div>
           </Link>
-          <Link href="https://whisker-nft.vercel.app/" passHref className="w-full" target="_blank" rel="noopener noreferrer">
+          <Link href="https://mint.witwhisker.com/" passHref className="w-full" target="_blank" rel="noopener noreferrer">
             <div className={`flex items-center justify-start w-full px-4 py-2 text-xl rounded-md hover-bg`}>
               <FaExternalLinkAlt className="mr-2 text-cardText" />
               <span className="text-cardText">Mint</span>
