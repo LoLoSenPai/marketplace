@@ -79,7 +79,7 @@ export function SideMenu() {
                   Home
                 </Box>
               </Link>
-              <Link href="/collection/84532/0xcc5Fcb80dc14C1de40c3CCb26fa4b0CEa0fc5665" passHref>
+              <Link href="/collection/8453/0xDEE1651cac5319A2e7f7aD260852DeF4724EC103" passHref>
                 <Box
                   as="a"
                   fontSize='3xl'
@@ -147,7 +147,7 @@ export function SideMenu() {
 
 export function SideMenuDesktop() {
   const pathname = usePathname();
-  const marketplacePath = "/collection/84532/0xcc5Fcb80dc14C1de40c3CCb26fa4b0CEa0fc5665";
+  const marketplacePath = "/collection/8453/0xDEE1651cac5319A2e7f7aD260852DeF4724EC103";
 
   return (
     <Flex

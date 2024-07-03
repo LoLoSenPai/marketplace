@@ -1,5 +1,5 @@
 import type { Chain } from "thirdweb";
-import { sepoliaBase } from "./chains";
+import { base } from "./chains";
 
 export type NftContract = {
   address: string;
@@ -20,8 +20,8 @@ export type NftContract = {
  */
 export const NFT_CONTRACTS: NftContract[] = [
   {
-    address: "0xcc5Fcb80dc14C1de40c3CCb26fa4b0CEa0fc5665",
-    chain: sepoliaBase,
+    address: "0xDEE1651cac5319A2e7f7aD260852DeF4724EC103",
+    chain: base,
     title: "Whisker",
     thumbnailUrl:
       "/logo.jpg",

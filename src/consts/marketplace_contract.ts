@@ -1,5 +1,5 @@
 import type { Chain } from "thirdweb";
-import { sepoliaBase } from "./chains";
+import { base } from "./chains";
 
 type MarketplaceContract = {
   address: string;
@@ -12,8 +12,8 @@ type MarketplaceContract = {
  */
 export const MARKETPLACE_CONTRACTS: MarketplaceContract[] = [
   {
-    address: "0x8650a658273B660b0533D881b35781404aCA434C",
-    chain: sepoliaBase,
+    address: "0x09869607D6A33A9f077c4fa64149131fFe5D7E5e",
+    chain: base,
   },
   // {
   //   address: "0x571B773F1e4A7C080b51C36f37e06f371C515569",

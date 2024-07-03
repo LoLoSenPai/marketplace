@@ -1,5 +1,5 @@
 import type { Chain } from "thirdweb";
-import { sepoliaBase } from "./chains";
+import { base } from "./chains";
 
 export type Token = {
   tokenAddress: string;
@@ -23,7 +23,7 @@ export type SupportedTokens = {
 export const SUPPORTED_TOKENS: SupportedTokens[] = [
 
   {
-    chain: sepoliaBase,
+    chain: base,
     tokens: [
       // {
       //   tokenAddress: "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
@@ -41,5 +41,5 @@ export const SUPPORTED_TOKENS: SupportedTokens[] = [
 
 export const NATIVE_TOKEN_ICON_MAP: { [key in Chain["id"]]: string } = {
   1: "/native-token-icons/eth.png",
-  [sepoliaBase.id]: "/native-token-icons/eth.png",
+  [base.id]: "/native-token-icons/eth.png",
 };

@@ -10,7 +10,7 @@ function games() {
         <h2 className='text-3xl'>How to play?</h2>
         <div className='text-card-text'>Whisker BETA games require a Whisker NFT GamePass to play,<br />
           get one here:
-          <Link href={'/collection/84532/0xcc5Fcb80dc14C1de40c3CCb26fa4b0CEa0fc5665'} className='ml-1 text-blue-500'>MARKETPLACE</Link>.<br />
+          <Link href={'/collection/8453/0xDEE1651cac5319A2e7f7aD260852DeF4724EC103'} className='ml-1 text-blue-500'>MARKETPLACE</Link>.<br />
           There will be 9 temporary worlds, to be won, 15% of our supply.</div>
       </div>
       <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
